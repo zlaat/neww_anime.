@@ -1,0 +1,420 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('back.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding-left: 20px;
+}
+
+nav {
+    float: right;
+    padding-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1; /* дозволяє main займати весь доступний простір */
+    margin-top: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    flex: 3;
+}
+
+.product-tile {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-tile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-tile h2 {
+    color: #333;
+}
+
+.beauty-fact {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-left: 20px;
+    align-self: flex-start;
+}
+
+.beauty-fact h2 {
+    color: #333;
+}
+
+
+.footer {
+    background-color: #333; 
+    color: #fff; /* білий текст */
+    padding: 20px;
+    display: flex;
+    align-items: center; /* вирівнювання по центру по вертикалі */
+    flex-wrap: wrap; /* дозволяє елементам переноситися на новий рядок на малих екранах */
+    margin-top: auto; /* притискає футер до низу сторінки */
+    width: 100%; /* футер займатиме всю ширину */
+    position: relative; /* зняття потенційних проблем з позиціонуванням */
+}
+
+/* кнопка "підтримати ЗСУ" */
+.btn-accent {
+    background-color: transparent; /* фон прозорий */
+    color: #fff; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-right: 40px; 
+
+    border: 2px solid #ffcc00; /* 2px товщина, суцільна лінія, жовтий колір */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* transition для плавного переходу */
+}
+
+
+.btn-accent:hover {
+    background-color: #ffcc00; /* при наведенні курсору фон стає жовтим */
+    color: #333; /* текст стає темним для контрасту */
+    border-color: #ffcc00; /* обведення залишається жовтим або змінюється, якщо потрібно */
+}
+
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.logo__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00; 
+    margin-left: 29px;
+}
+
+.logo__caption {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* текстовий блок футера */
+.footer__text {
+    flex-grow: 1; /* дозволяє блоку займати весь доступний простір */
+    font-size: 14px;
+    line-height: 1.5;
+    margin-right: 20px; /* відступ праворуч */
+}
+
+
+.footer__text a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        padding-left: 10px;
+    }
+
+    nav {
+        padding-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .intro h2 {
+        font-size: 1.8em;
+    }
+
+    .intro p {
+        font-size: 1.2em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    /* адаптивні стилі для футера на малих екранах */
+    .footer {
+        flex-direction: column; /* на малих екранах елементи розташовуються вертикально */
+        align-items: flex-start; /* вирівнювання по лівому краю */
+        text-align: left;
+        padding: 15px; /* зменшити відступ */
+    }
+
+    .btn-accent,
+    .logo,
+    .footer__text {
+        margin-right: 0;
+        margin-bottom: 15px; /* додати відступи між елементами */
+        width: 100%; /* займають всю ширину */
+    }
+
+    .btn-accent {
+        text-align: center; 
+        padding: 12px 25px; /* трохи збільшити розмір кнопки для кращого натискання */
+    }
+
+    .logo {
+        align-items: center; 
+    }
+
+    .footer__text {
+        text-align: center; 
+    }
+}
+
+.intro {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px 0;
+}
+
+.intro h2 {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4081;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+    background-color: #e5005b;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px; 
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    animation: slide 10s infinite;
+}
+
+.slider img {
+    width: 33.333%;
+}
+
+/* Додамо ці стилі в кінець вашого файлу CSS */
+
+/* ===== Покращення карток аніме ===== */
+.product-tile {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-tile img {
+    transition: transform 0.5s ease;
+}
+
+.product-tile:hover img {
+    transform: scale(1.05);
+}
+
+/* Ефект "глядачів" */
+.product-tile::after {
+    content: "☆";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 215, 0, 0.9);
+    color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ===== Покращення футера ===== */
+.footer {
+    background: linear-gradient(135deg, #333 0%, #222 100%);
+    border-top: 1px solid #ffcc00;
+}
+
+.logo__title {
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+/* ===== Покращення бічної панелі ===== */
+.beauty-fact {
+    position: sticky;
+    top: 20px;
+}
+
+.beauty-fact li {
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.beauty-fact li:hover {
+    transform: translateX(5px);
+}
+
+.beauty-fact li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.beauty-fact li a:hover {
+    background: rgba(255, 204, 0, 0.2);
+}
+
+/* ===== Додаткові адаптивні стилі ===== */
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .beauty-fact {
+        margin-left: 0;
+        margin-top: 30px;
+        position: static;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Анімація для заголовка */
+@keyframes titleGlow {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    50% { text-shadow: 0 0 15px rgba(255, 204, 0, 0.8); }
+    100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+}
+
+header h1 {
+    animation: titleGlow 3s infinite;
+}
+
+/* Покращення для навігації */
+nav ul li a {
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}

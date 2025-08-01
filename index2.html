@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime.ua - кращі аніме українською</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles14.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-dragon"></i> аніме.юа</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html" target="_blank"><i class="fas fa-home"></i> Головна</a></li>
+                    <li><a href="#"><i class="fas fa-trophy"></i> Топ 20</a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i> Закладки</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Пошук</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <!-- Слайдер з популярними аніме -->
+            <!-- <div class="image-slider">
+                <div class="slider">
+                    <img src="https://www.japanbuzz.info/wp-content/uploads/2024/01/Digital-artists.png" alt="Популярні аніме">
+                    <img src="https://community.wacom.com/en-us/wp-content/uploads/sites/40/2024/01/Anime-About-Art-Feature.jpg" alt="Новинки">
+                    <img src="https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeir9-Zf2OBUB2S-tE6iQbwWPvQXU3ACRFt-uq1lmT0cn25-PtR22OCNyJ6Q1-AP78faWB_lg6DlAI0Dd7zRqjzFjLFSKItlpvf7.jpg?r=ba3" alt="Класика">
+                </div>
+            </div> -->
+
+            <!-- Вступний блок -->
+            <section class="intro">
+                <h2>Ласкаво просимо до аніме.юа!</h2>
+                <p>Найкращі аніме українською мовою. Дивіться онлайн без реклами та з високою якістю.</p>
+                <a href="#" class="button">Почати перегляд</a>
+            </section>
+
+            <!-- Основний контент -->
+            <section class="content">
+                <div class="product-grid">
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='evangelion.JPG')}}" alt="Євангеліон">
+                        <h2>Євангеліон</h2>
+                        <p>Класичне меха-аніме з глибоким філософським підтекстом</p>
+                        <div class="rating"><i class="fas fa-star"></i> 9.2/10</div>
+                    </div>
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='deathnote.JPG')}}" alt="Зошит смерті">
+                        <h2>Зошит смерті</h2>
+                        <p>Інтригуючий детектив з надприродніми елементами</p>
+                        <div class="rating"><i class="fas fa-star"></i> 9.0/10</div>
+                    </div>
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='souleater.JPG')}}" alt="Пожирач душ">
+                        <h2>Пожирач душ</h2>
+                        <p>Захоплююча історія про мисливців на демонів</p>
+                        <div class="rating"><i class="fas fa-star"></i> 8.8/10</div>
+                    </div>
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='nana.JPG')}}" alt="Нана">
+                        <h2>Нана</h2>
+                        <p>Драматична історія про дружбу, музику та кохання</p>
+                        <div class="rating"><i class="fas fa-star"></i> 8.5/10</div>
+                    </div>
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='crazy.JPG')}}" alt="Шалений азарт">
+                        <h2>Шалений азарт</h2>
+                        <p>Напружений психологічний трилер про азартні ігри</p>
+                        <div class="rating"><i class="fas fa-star"></i> 9.1/10</div>
+                    </div>
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='jojo.JPG')}}" alt="Дивовижні пригоди ДжоДжо">
+                        <h2>Пригоди ДжоДжо</h2>
+                        <p>Екстравагантний бойовик з унікальним стилем</p>
+                        <div class="rating"><i class="fas fa-star"></i> 8.4/10</div>
+                    </div>
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='onepiece.JPG')}}" alt="Ван Піс">
+                        <h2>Ван Піс</h2>
+                        <p>Епічні пригоди піратів у пошуках скарбу</p>
+                        <div class="rating"><i class="fas fa-star"></i> 8.1/10</div>
+                    </div>
+                    <div class="product-tile">
+                        <img src="{{ url_for('static', filename='spyfamily.JPG')}}" alt="Сім'я шпигуна">
+                        <h2>Сім'я шпигуна</h2>
+                        <p>Комедійний шпигунський екшен з теплим сімейним антуражем</p>
+                        <div class="rating"><i class="fas fa-star"></i> 9.0/10</div>
+                    </div>
+                </div>
+                
+                <!-- Бічна панель -->
+                <aside class="beauty-fact">
+                    <h2><i class="fas fa-filter"></i> Фільтр за жанрами</h2>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-fist-raised"></i> бойовики</a></li>
+                        <li><a href="#"><i class="fas fa-theater-masks"></i> драми</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i> детективи</a></li>
+                        <li><a href="#"><i class="fas fa-laugh-squint"></i> комедії</a></li>
+                        <li><a href="#"><i class="fas fa-map-marked-alt"></i> пригоди</a></li>
+                        <li><a href="#"><i class="fas fa-brain"></i> психологічні</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i> романтика</a></li>
+                        <li><a href="#"><i class="fas fa-hat-wizard"></i> фентезі</a></li>
+                    </ul>
+                    
+                    <h2><i class="fas fa-newspaper"></i> Аніме-новини</h2>
+                    <div class="news-item">
+                        <h3>Новий сезон "Атаки Титанів"</h3>
+                        <p>Фінальний сезон вийде влітку 2025 року</p>
+                    </div>
+                    <div class="news-item">
+                        <h3>"Сайтама" повертається</h3>
+                        <p>3 сезон анонсовано на осінь 2025</p>
+                    </div>
+                </aside>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="footer d-flex ai-center">
+        <a href="https://u24.gov.ua/" rel="nofollow" target="_blank" class="btn-accent centered-content">
+            <i class="fas fa-hand-holding-heart"></i> підтримати ЗСУ
+        </a>
+        <div class="logo footer__logo">
+            <div class="logo__title">аніме.юа</div>
+            <p class="logo__caption">аніме українською мовою</p>
+        </div>
+        <div class="footer__text flex-grow-1">
+            <p>Сайт для справжніх отаку віком 16+</p>
+            <p>© 2025 Всі права захищені</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <!-- <div class="footer__counter">
+            <i class="fas fa-users"></i> Онлайн: 1,245
+        </div> -->
+    </footer>
+</body>
+</html>
